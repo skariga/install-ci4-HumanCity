@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HapeBaru</string>
+    <string name="button_label_toast">Yusuf Jejeh</string>
+    <string name="count_initial_toast">0</string>
+    <string name="toast_messages">Hi,Bu Yanuar</string>
+    <string name="button_label_Down">Down</string>
+    <string name="button_label_Up">Up</string>
+
+</resources>
