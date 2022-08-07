@@ -10,25 +10,35 @@ class Pages extends BaseController
             'tittle' => 'Home | WebUcupSlebew',
             'tes' => ['satu', 'dua', 'tiga']
         ];
-        echo view('layout/header',  $data);
-        echo view('pages/home');
-        echo view('layout/footer');
+        return view('pages/home' ,$data);
     }
 
     public function about()
     {
         $data = [
-            'tittle' => 'About Me |WebUcupSlebew'
+            'tittle' => 'About |WebUcupSlebew'
         ];
-        echo view('layout/header');
-        echo view('pages/about');
-        echo view('layout/footer');
+        return view('pages/about' , $data);
     }
 
     public function contact()
     {
-        echo view('layout/header');
-        echo view('pages/contact');
-        echo view('layout/footer');
-    }
+        $data =[
+            'tittle' => 'Contact | WebUcupSlebew',
+            'alamat' => [
+                [
+                'tipe' => 'rumah',
+                'alamat' => 'Jl.Mangga No. 123',
+                'kota' => 'Bandung'            
+            ],
+            [
+             'tipe' => 'kantor',
+             'alamat' =>'Jl.Wahyudi No. 933',
+             'kota' => 'Bandung'   
+            ]
+
+        ]
+    ];
+        return view('pages/contact' , $data);
+ }
 }
