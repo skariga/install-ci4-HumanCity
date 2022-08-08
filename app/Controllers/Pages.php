@@ -7,8 +7,7 @@ class Pages extends BaseController
     public function index()
     {        
         $data = [
-            'tittle' => 'Home | WebUcupSlebew',
-            'tes' => ['satu', 'dua', 'tiga']
+            'tittle' => 'Home |UcupSlebew'
         ];
         return view('pages/home' ,$data);
     }
@@ -16,7 +15,7 @@ class Pages extends BaseController
     public function about()
     {
         $data = [
-            'tittle' => 'About |WebUcupSlebew'
+            'tittle' => 'About |bUcupSlebew'
         ];
         return view('pages/about' , $data);
     }
@@ -24,7 +23,7 @@ class Pages extends BaseController
     public function contact()
     {
         $data =[
-            'tittle' => 'Contact | WebUcupSlebew',
+            'tittle' => 'Contact |UcupSlebew',
             'alamat' => [
                 [
                 'tipe' => 'rumah',
