@@ -15,7 +15,7 @@ class Pages extends BaseController
     public function about()
     {
         $data = [
-            'tittle' => 'About |bUcupSlebew'
+            'tittle' => 'About | UcupSlebew'
         ];
         return view('pages/about' , $data);
     }

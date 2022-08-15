@@ -1,10 +1,18 @@
 <?= $this->extend('layout/template');?>
 
 <?= $this->section('content');?>
+
 <div class="container">
     <div class="row">
         <div class="col">
+          <a href="/komik/create" class="btn btn-primary mt-3">Form Tambah Komik</a>
             <h1 class="mt-3">Daftar Komik</h1>
+            <?php if(session()->getFlashdata('pesan',)) : ?>
+              <div class="alert alert-success" role="alert">
+              <?= session()->getFlashdata('pesan'); ?>
+            </div>
+
+              <?php endif;?>
         <table class="table">
   <thead>
     <tr>
@@ -15,13 +23,15 @@
     </tr>
   </thead>
   <tbody>
+    <?php $i = 1;?>
+    <?php foreach ($komik as $k) :?>
     <tr>
-      <th scope="row-2"></th>
-      <td><img src="/img/onepiece.jpg?>" alt="" class="sampul"></td>
-      <td>One Piece</td>
-      <td><a href="" class="btn btn-success">Detail</a></td>
+      <th scope="row"><?= $i++?></th>
+      <td><img src="/img/<?= $k['sampul'];?>" alt="" class="sampul"></td>
+      <td> <?=$k ['judul']; ?></td>
+      <td><a href="/komik/<?= $k['slug'];?>" class="btn btn-success">Detail</a></td>
     </tr>
-
+      <?php endforeach;?>
   </tbody>
 </table>
         </div>
